@@ -1,0 +1,11 @@
+classes:
+  - fake.common
+
+parameters:
+  kapitan:
+    compile:
+      - output_path: jsonnet_output
+        input_type: jsonnet
+        output_type: yaml
+        input_paths:
+          - dependencies/common/id/dextr/poc/backing-services/proton-mock.jsonnet

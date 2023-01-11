@@ -1,0 +1,18 @@
+parameters:
+  app_id: ?{plain:env/APP_ID}
+  namespace: ?{plain:env/K8S_NAMESPACE}
+  sp_release: ?{plain:env/CIC_RELEASE}
+  project_id: ?{plain:env/CI_PROJECT_ID}
+  app_version: ?{plain:env/CI_COMMIT_SHORT_SHA}
+  app: ?{plain:env/APP_NAME}-${target_name}
+  env: ?{plain:env/CI_COMMIT_REF_SLUG}
+  pipeline_id: ?{plain:env/CI_PIPELINE_ID}
+  kapitan:
+    vars:
+      target: ${target_name}
+#    dependencies:
+#      - type: git
+#        output_path: inventory/classes
+#        source: https://github.com/dog3h/fakes.git
+##        subdir: examples/kubernetes/inventory/classes
+#        ref: main
